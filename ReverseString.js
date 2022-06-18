@@ -1,11 +1,12 @@
+//Correct version using built in functions
 const reverseString = (n) => {
     //Declare empty array to push new string in to.
-    return n.split('').reverse().join('');
+    return n.split(' ').reverse().join(' ');
 }
 console.log(reverseString("Hello my name is"));
-//Returns si eman ym olleH
+//Returns is name my Hello
 
-//For loop version
+//For loop version, although incorrect
 const loopReverse = (sentence) =>{
     let newSentence = [];
     for(x = sentence.length-1; x >= 0; x--){
