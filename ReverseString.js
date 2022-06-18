@@ -3,7 +3,7 @@ const reverseString = (n) => {
     return n.split('').reverse().join('');
 }
 console.log(reverseString("Hello my name is"));
-//Returns si eman ym olleh
+//Returns si eman ym olleH
 
 //For loop version
 const loopReverse = (sentence) =>{
