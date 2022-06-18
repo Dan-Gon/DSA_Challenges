@@ -14,3 +14,4 @@ const loopReverse = (sentence) =>{
     return newSentence.join('');
 }
 console.log(loopReverse("Hello I am"));
+//Returns ma I olleH
