@@ -1,16 +1,14 @@
-const vowels = [
-    "a","A", "e", "E", "i", "I", "o", "O", "u", "U", "y", "Y"
-]
-const MultiplyVowels = (n) =>{
-    for (let i = 0; i < vowels.length; i++) {
-        for (let j = 0; j < n.length; j++) {
-            if (vowels[i] === vowels[j]){
-                return vowels[j] * 3;
-            }
-            else {
-                console.log()
-            }
+const multiplyVowels = (str,n) => {
+    let vowels = ['a','e','i','o','u'];
+    let newStr = '';
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            newStr += str[i].repeat(n);
+        } else {
+            newStr += str[i];
         }
     }
+    return newStr;
 }
-MultiplyVowels("Hello");
+
+console.log(multiplyVowels('sleep',10));
