@@ -1,22 +1,29 @@
-//Find the intersection between two arrays, a,b. If none exist, return null.
+//We want to return the indices of where two arrays intersect. 
 
-//Initial arrays
-let a = [1,4,5,6]
-let b = [2,3,4,7]
+//Declare two arrays
+let a = [1,4,5,6];
+let b = [2,3,4,5,6];
 
-//Function
-const findIntersection = (a,b) =>{
+//function to find intersection
+const unionizeWhere = (a,b) =>{
     let intersection = [];
 
-    for(let i = 0; i < a.length; i++){
-        for(let j = 0; j < b.length; j++){
-            if(a[i] === b[j]+1 || b[j] + 1 === a[i]){
-                console.log(`Found at ${a[i]} and ${b[j]}`)
+    if(a.some(index=> b.includes(index)) ===true) {
+        for (let x = 0; x < a.length; x++) {
+            for (let i = 0; i < b.length; i++) {
+                if (a[x] === b[i]) {
+                    intersection.push(x)
+                }
             }
-            else{
-                console.log("not found")
-            }
+
         }
+
+        return intersection;
     }
+    else {
+        return null;
+    }
+
 }
-findIntersection(a,b);
+
+console.log(unionizeWhere(a,b))
